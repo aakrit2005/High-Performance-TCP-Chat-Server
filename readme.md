@@ -26,6 +26,14 @@ This project was built to understand how high-level networking frameworks work i
 * **Application Layer:** Supports real-time broadcast chat, private messaging (`/msg`), dynamic user nicknames (`/nick`), and graceful `SIGINT` shutdowns.
 * **Reference Client:** Includes a dedicated two-thread console client (read/write) for immediate testing.
 
+##Server in Action
+
+<img width="730" alt="image" src="https://github.com/user-attachments/assets/17c195b1-1660-4f65-8ff3-b2839b797a9e" />
+
+<img width="730" alt="image" src="https://github.com/user-attachments/assets/c18f536a-3862-4915-ba70-c6827cbca837" />
+
+<img width="730" alt="image" src="https://github.com/user-attachments/assets/eb9a6ad6-0d98-4fd2-8708-b449ecc269e1" />
+
 ## Stress Testing & Performance
 The server's asynchronous reactor pattern was validated using a custom Python-based load-testing client capable of spawning hundreds of concurrent TCP connections. to simulate high-traffic environments. 
 
@@ -36,6 +44,7 @@ The server's asynchronous reactor pattern was validated using a custom Python-ba
 * ≈4 million message deliveries
 
 During sustained load, the server successfully maintained protocol correctness, properly buffered partial writes via `EPOLLOUT`, and remained entirely responsive with zero deadlocks or dropped packets.
+
 
 ## Architecture Overview
 The server operates on a classic **Reactor Pattern**. The main thread acts exclusively as the event loop, completely decoupled from application logic.
