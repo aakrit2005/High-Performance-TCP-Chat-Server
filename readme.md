@@ -26,7 +26,7 @@ This project was built to understand how high-level networking frameworks work i
 * **Application Layer:** Supports real-time broadcast chat, private messaging (`/msg`), dynamic user nicknames (`/nick`), and graceful `SIGINT` shutdowns.
 * **Reference Client:** Includes a dedicated two-thread console client (read/write) for immediate testing.
 
-##Server in Action
+## Server in Action
 
 <img width="730" alt="image" src="https://github.com/user-attachments/assets/17c195b1-1660-4f65-8ff3-b2839b797a9e" />
 
